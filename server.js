@@ -8,27 +8,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 var tables = [
-    {
-        name: "Jeff",
-        phone: "1234567890",
-        email: "test@gmail.com",
-        uniqueID: "420"
-    },
-    {
-        name: "Jeff",
-        phone: "1234567890",
-        email: "test@gmail.com",
-        uniqueID: "420"
-    }
 ];
 
 var waitList = [
-    {
-        name: "Jeff",
-        phone: "1234567890",
-        email: "test@gmail.com",
-        uniqueID: "420"
-    }
+
 ];
 
 app.get("/", function(req, res) {
