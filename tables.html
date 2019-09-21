@@ -23,6 +23,9 @@
 				<a href="reserve.html"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
 				<a href="home.html"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
 			</div>
+			<div class="text-center">
+				<div id="pageViews">Page Views:</div>
+			</div>
 		</div>
 
 		<div class="row">
@@ -75,6 +78,11 @@
 				div.html("<h2><span class='label label-primary'>"+(i+1)+"</span> | " + data[i].uniqueID + "</h2>");
 				$("#waitlistSection").append(div);
 			};
+		});
+		$.get("/api/pageviews2/", function(data) {
+			console.log(data);
+			$("#pageViews").html("Page Views: " + data)
+
 		});
 
 	</script>
