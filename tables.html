@@ -57,6 +57,26 @@
 	    </footer>
 
 	</div>
+	<script>
+		$.get("/api/tables/", function(data) {
+			console.log(data);
+			for(i=0;i<data.length;i++){
+				var div = $("<div>");
+				div.addClass("well");
+				div.html("<h2><span class='label label-primary'>"+(i+1)+"</span> | " + data[i].uniqueID + "</h2>");
+				$("#tableSection").append(div);
+			};
+		});
+		$.get("/api/waitlist/", function(data) {
+			console.log(data);
+			for(i=0;i<data.length;i++){
+				var div = $("<div>");
+				div.addClass("well");
+				div.html("<h2><span class='label label-primary'>"+(i+1)+"</span> | " + data[i].uniqueID + "</h2>");
+				$("#waitlistSection").append(div);
+			};
+		});
 
+	</script>
 
 </body></html>
